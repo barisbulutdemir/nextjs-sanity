@@ -23,7 +23,7 @@ const Blogs = ({ id, title, image, slug, content, createdAt, category }: Props) 
   return (
     <div className="flex space-x-6">
       <div className="w-[25%] object-cover">
-        <Link href={slug.current}><Image src={image} alt={slug.current} className="" width={250} height={250} /> </Link>
+        <Link href={slug.current} onClick={() => window.location.href = slug.current}><Image src={image} alt={slug.current} className="" width={250} height={250} /> </Link>
       </div>
       <div className="space-y-4 w-[60%]">
       <div className="space-x-2">
@@ -33,7 +33,7 @@ const Blogs = ({ id, title, image, slug, content, createdAt, category }: Props) 
             </span>
           ))}
         </div>
-        <Link href={slug.current}><h1 className="text-xl font-bold tracking-wider">{title}</h1></Link>
+        <Link href={slug.current} onClick={() => window.location.href = slug.current}><h1 className="text-xl font-bold tracking-wider">{title}</h1></Link>
         {/* PortableText ile content'i görüntüle */}
         <div className="text-slate-400 line-clamp-3 text-sm">
 
