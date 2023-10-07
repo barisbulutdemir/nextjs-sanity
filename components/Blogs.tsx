@@ -23,7 +23,7 @@ const Blogs = ({ id, title, image, slug, content, createdAt, category }: Props) 
   return (
     <div className="flex space-x-6">
       <div className="w-[25%] object-cover">
-        <Image src={image} alt={slug.current} className="" width={250} height={250} />
+        <Link href={slug.current}><Image src={image} alt={slug.current} className="" width={250} height={250} /> </Link>
       </div>
       <div className="space-y-4 w-[60%]">
       <div className="space-x-2">
